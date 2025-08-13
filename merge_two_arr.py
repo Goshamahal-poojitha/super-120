@@ -1,0 +1,19 @@
+n=list(map(int,input().split()))
+m=list(map(int,input().split()))
+i=0
+j=0
+res=[]
+while(i<len(n)and j<len(m)):
+    if(n[i]<=m[j]):
+        res.append(n[i])
+        i+=1
+    elif(m[j]<n[i]):
+        res.append(m[j])
+        j+=1
+while(i<len(n)):
+    res.append(n[i])
+    i+=1
+while(j<len(m)):
+    res.append(m[j])
+    j+=1
+print(res)
